@@ -9,9 +9,9 @@ type Book = {
 
 function App() {
   const [books, setBooks] = useState<Book[]>([]);
-  const [title, setTitle] = useState("");
-  const [author, setAuthor] = useState("");
-  const apiUrl = "https://book-api-cgu2.onrender.com/books";
+  const [title, setTitle] = useState<string>("");
+  const [author, setAuthor] = useState<string>("");
+  const apiUrl: string = "https://book-api-cgu2.onrender.com/books";
 
   useEffect(() => {
     fetch(apiUrl)
